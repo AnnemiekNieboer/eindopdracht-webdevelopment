@@ -63,6 +63,7 @@ h1 {
     font-size: 30px;
     position: relative;
     top: -8px;
+    margin-bottom: 10px;
 }
 
 .general-button {
@@ -83,6 +84,10 @@ h1 {
     text-transform: capitalize;
 }
 
+.search-recipe__dropdown-buttons {
+    font-size: 11px;
+    color: var(--main-focus-color);
+}
 
 /* ------------------------------- 3. Layout --------------------------------------- */
 
@@ -97,9 +102,11 @@ h1 {
     background-color: var(--main-contrast-color);
     border: none;
     border-radius: 2px;
-    padding: 5px 10px 5px 10px;
-    margin: 15px 0 15px 0;
+    padding: 8px 10px 8px 10px;
     cursor: pointer;
+    min-width: 100px;
+    height: 28px;
+    text-align: left;
 }
 
 .general-button::after {
@@ -211,6 +218,7 @@ h1 {
     top: -30px;
     height: 215px;
     z-index: 2;
+    box-shadow: 0 10px 20px 0 var(--main-shadow-color);
 }
 
 .header-featured-recipes__recipe-card:nth-of-type(2) > img {
@@ -238,9 +246,44 @@ h1 {
     min-height: 40px;
 }
 
-/* --------------- 4.5 Main-Recipe-find-section ------------------- */
+/* --------------- 4.5 Main-Search-Recipe-section ------------------- */
+
+.main-search-recipe__outer-container {
+    background-color: var(--main-focus-color);
+    flex-basis: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-search-recipe__inner-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#searchQuery {
+    font-size: 11px;
+    padding-left: 10px;
+}
+
+#searchQuery, .search-recipe__dropdown-buttons {
+    height: 28px;
+    border-radius: 2px;
+    border: 1px solid var(--main-background-color-dark);
+    margin: 5px;
+}
+
+.search-recipe__dropdown-buttons {
+    width: 90px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
 
 /* --------------- 4.6 Main-Recipe-cards-section ------------------- */
+
+
 
 /* --------------- 5. Footer ------------------- */
 
