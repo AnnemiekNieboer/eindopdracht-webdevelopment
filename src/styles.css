@@ -60,18 +60,19 @@ h1 {
     text-transform: capitalize;
     font-weight: 200;
     font-size: 30px;
+    position: relative;
+    top: -8px;
 }
 
 .general-button {
     text-transform: capitalize;
     font-size: 10px;
-    font-weight: 500;
+    font-weight: 600;
     color: var(--main-focus-color);
 }
 
 
 /* ------------------------------- 3. Layout --------------------------------------- */
-/*buttons, links, etc*/
 
 .outer-container__reuseable {
     display: flex;
@@ -113,7 +114,6 @@ h1 {
     flex-direction: row;
     justify-content: flex-end;
     flex-basis: 400px;
-
 }
 
 .navigation__list li {
