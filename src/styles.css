@@ -144,7 +144,6 @@ h1 {
     position: absolute;
     padding-left: 5px;
     right: 10px;
-
 }
 
 /* ------------------------------- 4. Areas --------------------------------------- */
@@ -159,7 +158,6 @@ h1 {
     height: 60px;
     align-items: center;
     background-color: var(--main-background-color-dark);
-    /*flex-basis: 1400px;*/
 }
 
 .navigation__list {
