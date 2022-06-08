@@ -4,8 +4,8 @@
   "description": "Eindopdracht webdevelopment deel van de front-end opleiding Novi Hogeschool",
   "main": "main.js",
   "scripts": {
-    "start": "parcel src/index.html",
-    "build": "parcel build src/index.html",
+    "start": "parcel src/recipe-page.html",
+    "build": "parcel build src/recipe-page.html",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/AnnemiekNieboer/eindopdracht-webdevelopment#readme",
   "devDependencies": {
-    "parcel": "^2.6.0"
+    "parcel": "^2.6.0",
+    "parcel-plugin-nuke-dist": "^1.0.1"
   }
 }

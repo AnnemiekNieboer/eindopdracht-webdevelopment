@@ -118,6 +118,30 @@ h1 {
     text-decoration: none;
     color: var(--main-background-color-dark);
 }
+
+/*//////////////recipe page////////////////// */
+
+.recipe-page-main__outer-container {
+    color: var(--main-focus-color);
+    font-size: 12px;
+}
+
+.recipe-page-main__outer-container h4 {
+    text-transform: capitalize;
+    font-size: 18px;
+}
+
+.recipe-page-main__outer-container h5 {
+    text-transform: capitalize;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.recipe-description__header-container p {
+    font-size: 14px;
+}
+
 /* ------------------------------- 3. Layout --------------------------------------- */
 
 .outer-container__reuseable {
@@ -377,4 +401,53 @@ h1 {
     margin-right: 10px;
 }
 
-/* ------------------------------- 6. Media Queries --------------------------------------- */
+/*///////////////Recipe page/////////////////*/
+
+/* --------------- 6. Recipe-page-Main ------------------- */
+
+.recipe-page-main__outer-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 800px;
+    align-self: center;
+    margin-top: 60px;
+    flex-wrap: wrap;
+}
+
+.recipe-page-main__recipe-description {
+    width: 60%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.recipe-description__header-container {
+    display: flex;
+    width: 100%;
+}
+
+.recipe-description__header-container img {
+    width: 20px;
+    height: 20px;
+    margin-left: 20px;
+    margin-right: 6px;
+}
+
+.recipe-page-main__recipe-image {
+    width: 40%;
+}
+
+.recipe-page-main__recipe-ingredients {
+    width: 60%;
+}
+
+.recipe-page-main__recipe-nutrients {
+    width: 40%;
+}
+
+.recipe-page-main__health-labels {
+    width: 100%;
+}
+
+
+/* ------------------------------- 7. Media Queries --------------------------------------- */
