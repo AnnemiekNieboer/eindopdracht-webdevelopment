@@ -79,6 +79,11 @@ h1 {
     font-size: 10px;
     font-weight: 600;
     color: var(--main-focus-color);
+    text-align: left;
+}
+
+.add-button {
+    text-align: right;
 }
 
 .featured-recipes-recipe-card__text-section > h5 {
@@ -95,6 +100,10 @@ h1 {
     font-size: 9px;
     font-weight: 300;
     text-transform: capitalize;
+}
+
+#searchQuery, #searchQuery__calorie-calculator, #calorie-calculator__add-amount {
+    font-size: 11px;
 }
 
 .search-recipe__dropdown-buttons {
@@ -133,13 +142,6 @@ h1 {
     font-size: 12px;
 }
 
-/*.recipe-page-main__outer-container h1 {*/
-/*    text-transform: capitalize;*/
-/*    font-size: 20px;*/
-/*    font-weight: 700;*/
-/*    color: var(--main-focus-color);*/
-/*}*/
-
 .recipe-page-main__outer-container h5 {
     text-transform: capitalize;
     font-size: 16px;
@@ -159,6 +161,15 @@ h1 {
     text-transform: capitalize;
 }
 
+/*//////////////calorie calculator page////////////////// */
+
+.calorie-calculator__outer-container {
+    color: var(--main-focus-color);
+    font-size: 12px;
+    text-transform: capitalize;
+}
+
+
 /* ------------------------------- 3. Layout --------------------------------------- */
 
 .outer-container__reuseable {
@@ -176,8 +187,12 @@ h1 {
     cursor: pointer;
     min-width: 100px;
     height: 28px;
-    text-align: left;
     position: relative;
+}
+
+.add-button {
+    min-width: 60px;
+    padding: 8px 10px 8px 10px;
 }
 
 .general-button::after {
@@ -185,6 +200,13 @@ h1 {
     position: absolute;
     padding-left: 5px;
     right: 10px;
+}
+
+.add-button::before {
+    content: "+";
+    position: absolute;
+    padding-right: 5px;
+    left: 12px;
 }
 
 /* ------------------------------- 4. Areas --------------------------------------- */
@@ -326,12 +348,8 @@ h1 {
     min-width: 800px;
 }
 
-#searchQuery, #searchQuery__calorie-calculator {
-    font-size: 11px;
+#searchQuery, .search-recipe__dropdown-buttons, #searchQuery__calorie-calculator, #calorie-calculator__add-amount {
     padding-left: 10px;
-}
-
-#searchQuery, .search-recipe__dropdown-buttons, #searchQuery__calorie-calculator {
     height: 28px;
     border-radius: 2px;
     border: 1px solid var(--main-shadow-color);
@@ -523,7 +541,33 @@ h1 {
 .calorie-calculator__addedCalorie-data
 {
     width: 100%;
+    margin-bottom: 20px;
 }
 
+.calorie-calculator-data__heading th {
+    padding-right: 50px;
+}
 
+.calorie-calculator-data td {
+    text-align: center;
+    padding-right: 50px;
+}
+
+.calorie-calculator-data td:first-child {
+    text-align: left;
+    padding-right: 50px;
+}
+
+.calorie-calculator-data__heading {
+    text-align: center;
+}
+
+/*.calorie-calculator-added-caloriedata__total td {*/
+/*    border-top: 1px solid var(--main-focus-color);*/
+/*}*/
+
+
+#searchQuery__calorie-calculator {
+    width:163px
+}
 /* ------------------------------- 7. Media Queries --------------------------------------- */

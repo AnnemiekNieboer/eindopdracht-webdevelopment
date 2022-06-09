@@ -37,13 +37,13 @@
         </div>
         <div class="calorie-calculator__fetchedCalorieData">
             <table>
-                <tr>
-                    <th>Product</th>
-                    <th>Quantity</th>
-                    <th>Label</th>
+                <tr class="calorie-calculator-data__heading">
+                    <th>product</th>
+                    <th>quantity</th>
+                    <th>label</th>
                 </tr>
-                <tr>
-                    <td>Mars</td>
+                <tr class="calorie-calculator-data">
+                    <td>mars</td>
                     <td>60</td>
                     <td>gram</td>
                 </tr>
@@ -52,9 +52,8 @@
         <div class="calorie-calculator__add-servings">
             <form>
                 <label for="calorie-calculator__add-amount">
-                    amount
                     <input type="text" name="calorie-calculator__add-amount" id="calorie-calculator__add-amount"
-                           placeholder="Barcode/product">
+                           placeholder="Amount">
                     serving(s)
                 </label>
                 <a href="#">
@@ -64,25 +63,25 @@
         </div>
         <div class="calorie-calculator__addedCalorie-data">
             <table>
-                <tr>
+                <tr class="calorie-calculator-data__heading">
                     <th>product</th>
                     <th>calories</th>
                     <th>fat</th>
                     <th>carbs</th>
                 </tr>
-                <tr>
+                <tr class="calorie-calculator-data">
                     <td>milk</td>
                     <td>140 kcal</td>
                     <td>8g</td>
                     <td>12g</td>
                 </tr>
-                <tr>
+                <tr class="calorie-calculator-data">
                     <td>mars</td>
                     <td>240 kcal</td>
                     <td>12g</td>
                     <td>31g</td>
                 </tr>
-                <tr class="calorie-calculator-added-caloriedata__total">
+                <tr class="calorie-calculator-added-caloriedata__total calorie-calculator-data">
                     <td>total</td>
                     <td>380 kcal</td>
                     <td>20g</td>
