@@ -168,7 +168,13 @@ h1 {
     font-size: 12px;
     text-transform: capitalize;
 }
+.calorie-calculator__add-servings form {
+    text-transform: none;
+}
 
+.calorie-calculator-data__heading {
+    text-align: center;
+}
 
 /* ------------------------------- 3. Layout --------------------------------------- */
 
@@ -546,6 +552,7 @@ h1 {
 
 .calorie-calculator-data__heading th {
     padding-right: 50px;
+    padding-bottom: 10px;
 }
 
 .calorie-calculator-data td {
@@ -558,16 +565,24 @@ h1 {
     padding-right: 50px;
 }
 
-.calorie-calculator-data__heading {
-    text-align: center;
+.calorie-calculator__addedCalorie-data table {
+    border-collapse: collapse;
 }
 
-/*.calorie-calculator-added-caloriedata__total td {*/
-/*    border-top: 1px solid var(--main-focus-color);*/
-/*}*/
+.calorie-calculator-data td {
+    padding-bottom: 10px;
+}
 
+.calorie-calculator-added-caloriedata__total td {
+    border-top: 1px solid var(--main-focus-color);
+    padding-top: 10px;
+}
 
 #searchQuery__calorie-calculator {
     width:163px
+}
+
+.calorie-calculator__search-button, .add-button {
+    margin-left: 10px;
 }
 /* ------------------------------- 7. Media Queries --------------------------------------- */
