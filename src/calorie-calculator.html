@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="assets/fonts/fonts.css">
+    <title>Calorie Calculator</title>
+</head>
+<body>
+<header class="outer-container__reuseable">
+    <nav class="navigation-container outer-container__reuseable">
+        <ul class="navigation__list-logo">
+            <li><a class="navigation__logo" href="index.html">the clueless cook</a></li>
+        </ul>
+        <ul class="navigation__list">
+            <li><a href="index.html">home</a></li>
+            <li><a href="#">about</a></li>
+            <li><a href="calorie-calculator.html">calculator</a></li>
+        </ul>
+    </nav>
+</header>
+<main class="outer-container__reuseable">
+    <div class="calorie-calculator__outer-container">
+        <div class="calorie-calculator__heading">
+            <h1>Calorie Calculator</h1>
+        </div>
+        <div class="calorie-calculator__search-bar">
+            <form action="">
+                <label for="searchQuery__calorie-calculator">
+                    <input type="text" name="searchQuery__calorie-calculator" id="searchQuery__calorie-calculator"
+                           placeholder="Barcode/product">
+                </label>
+                <a href="#">
+                    <button type="submit" class="general-button">search</button>
+                </a>
+            </form>
+        </div>
+        <div class="calorie-calculator__fetchedCalorieData">
+            <table>
+                <tr>
+                    <th>Product</th>
+                    <th>Quantity</th>
+                    <th>Label</th>
+                </tr>
+                <tr>
+                    <td>Mars</td>
+                    <td>60</td>
+                    <td>gram</td>
+                </tr>
+            </table>
+        </div>
+        <div class="calorie-calculator__add-servings">
+            <form>
+                <label for="calorie-calculator__add-amount">
+                    amount
+                    <input type="text" name="calorie-calculator__add-amount" id="calorie-calculator__add-amount"
+                           placeholder="Barcode/product">
+                    serving(s)
+                </label>
+                <a href="#">
+                    <button type="submit" class="add-button">add</button>
+                </a>
+            </form>
+        </div>
+        <div class="calorie-calculator__addedCalorie-data">
+            <table>
+                <tr>
+                    <th>product</th>
+                    <th>calories</th>
+                    <th>fat</th>
+                    <th>carbs</th>
+                </tr>
+                <tr>
+                    <td>milk</td>
+                    <td>140 kcal</td>
+                    <td>8g</td>
+                    <td>12g</td>
+                </tr>
+                <tr>
+                    <td>mars</td>
+                    <td>240 kcal</td>
+                    <td>12g</td>
+                    <td>31g</td>
+                </tr>
+                <tr class="calorie-calculator-added-caloriedata__total">
+                    <td>total</td>
+                    <td>380 kcal</td>
+                    <td>20g</td>
+                    <td>43g</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</main>
+<footer class="outer-container__reuseable">
+    <div class="footer__outer-container">
+        <div class="footer__inner-container">
+            <section class="footer__footer-card">
+                <h4>information</h4>
+                <ul class="footer-footer-card__items">
+                    <li><a href="#">Nulam a enim</a></li>
+                    <li><a href="#">Quisque cursus</a></li>
+                    <li><a href="#">Cras egestas</a></li>
+                    <li><a href="#">Nunc vitae</a></li>
+                </ul>
+            </section>
+            <section class="footer__footer-card">
+                <h4>about</h4>
+                <ul class="footer-footer-card__items">
+                    <li><a href="#">Quisque cursus</a></li>
+                    <li><a href="#">Cras egestas</a></li>
+                    <li><a href="#">Nunc vitae</a></li>
+                </ul>
+            </section>
+            <section class="footer__footer-card">
+                <h4>contact</h4>
+                <ul class="footer-footer-card__items">
+                    <li><a href="#">Cras egestas</a></li>
+                    <li><a href="#">Nunc vitae</a></li>
+                    <li><a href="#">Nullam enim</a></li>
+                </ul>
+            </section>
+            <section class="footer__footer-card">
+                <h4>social</h4>
+                <ul class="footer-footer-card__items">
+                    <li class="social-icons">
+                        <a href="#">
+                            <img src="./assets/icons/icon-facebook.png" alt="Facebook page of The Clueless Cook">
+                        </a>
+                        <a href="#">
+                            <img class="social-icons" src="./assets/icons/icon-instagram.png"
+                                 alt="Instagram page of The Clueless Cook">
+                        </a>
+                        <a href="#">
+                            <img src="./assets/icons/icon-linkedin.png" alt="LinkedIn page of The Clueless Cook">
+                        </a>
+                        <a href="#">
+                            <img src="./assets/icons/icon-twitter.png" alt="Twitter page of The Clueless Cook">
+                        </a>
+                    </li>
+                </ul>
+            </section>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
