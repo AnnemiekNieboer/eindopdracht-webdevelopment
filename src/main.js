@@ -33,7 +33,7 @@ async function fetchRecipeData(searchQuery) {
                 <div class="fetched-recipes-recipe-card__calories-and-time">
                     <p>${roundedCalories} calories | ${recipe.recipe.ingredients.length} ingredients</p>
                     <div class="fetched-recipes-recipe-card__time">
-                        <img src='src/assets/icons/time.png' alt='time-icon'>
+                        <img src='../assets/icons/time.png' alt='time-icon'>
                         <p>${recipe.recipe.totalTime} min</p>
                     </div>
                 </div>
@@ -48,3 +48,27 @@ async function fetchRecipeData(searchQuery) {
 }
 
 fetchRecipeData("carrot");
+// function createRecipeSearchResult() {
+//     const hits = response.data.hits;
+//     const data = hits.slice(0, 6);
+//     const recipeItemsContainer = document.getElementById("fetched-recipe-data-search-query");
+//
+//     data.map((recipe) => {
+//         const roundedCalories = Math.round(recipe.recipe.calories);
+//         recipeItemsContainer.innerHTML += `
+//             <div class="main-fetched-recipes__recipe-card">
+//             <img src="${recipe.recipe.image}" alt="${recipe.recipe.label}">
+//             <div class="fetched-recipes-recipe-card__text-section">
+//                 <h5>${recipe.recipe.label}</h5>
+//                 <div class="fetched-recipes-recipe-card__calories-and-time">
+//                     <p>${roundedCalories} calories | ${recipe.recipe.ingredients.length} ingredients</p>
+//                     <div class="fetched-recipes-recipe-card__time">
+//                         <img src='../assets/icons/time.png' alt='time-icon'>
+//                         <p>${recipe.recipe.totalTime} min</p>
+//                     </div>
+//                 </div>
+//             </div>
+//             </div>
+//             `
+//     }
+// }
