@@ -13,12 +13,34 @@ async function fetchRecipeData(searchQuery) {
         const hits = response.data.hits;
         // console.log(hits);
 
-        let randomNum = Math.random() * 20;
-        randomNum = randomNum + 6;
-        const firstNum = Math.round(randomNum);
-        const secondNum = firstNum - 6;
+        // let randomNum = Math.random() * 20;
+        // randomNum = randomNum + 6;
+        // const firstNum = Math.round(randomNum);
+        // const secondNum = firstNum - 6;
 
-        console.log(hits.slice(secondNum, firstNum));
+        // console.log(hits.slice(secondNum, firstNum));
+        // const data = hits.slice(secondNum, firstNum);
+        const data = hits.slice(0, 6);
+        const recipeItemsContainer = document.getElementById("fetched-recipe-data-search-query");
+
+        data.map((recipe) => {
+            const roundedCalories = Math.round(recipe.recipe.calories);
+            recipeItemsContainer.innerHTML += `
+            <div class="main-fetched-recipes__recipe-card">
+            <img src="${recipe.recipe.image}" alt="${recipe.recipe.label}">
+            <div class="fetched-recipes-recipe-card__text-section">
+                <h5>${recipe.recipe.label}</h5>
+                <div class="fetched-recipes-recipe-card__calories-and-time">
+                    <p>${roundedCalories} calories | ${recipe.recipe.ingredients.length} ingredients</p>
+                    <div class="fetched-recipes-recipe-card__time">
+                        <img src='src/assets/icons/time.png' alt='time-icon'>
+                        <p>${recipe.recipe.totalTime} min</p>
+                    </div>
+                </div>
+            </div>
+            </div>
+            `
+        })
 
     } catch (e) {
         console.log(e)
