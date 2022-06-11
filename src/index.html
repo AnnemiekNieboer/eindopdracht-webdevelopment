@@ -76,12 +76,12 @@
 <main class="outer-container__reuseable">
     <div class="main-search-recipe__outer-container">
         <div class="main-search-recipe__inner-container">
-            <form action="">
+            <form id="submit-form">
                 <label for="searchQuery">
                     <input type="text" name="searchQuery" id="searchQuery" placeholder="Recipe Search">
                 </label>
-                <label for="meal-type">
-                    <select name="meal-type" id="meal-type" class="search-recipe__dropdown-buttons">
+                <label for="meal-type-input-field">
+                    <select name="meal-type" id="meal-type-input-field" class="search-recipe__dropdown-buttons">
                         <option value="" disabled selected>Meal type</option>
                         <option value="breakfast">Breakfast</option>
                         <option value="dinner">Dinner</option>
@@ -90,43 +90,43 @@
                         <option value="teatime">Teatime</option>
                     </select>
                 </label>
-                <label for="cuisine">
-                    <select name="cuisine" id="cuisine" class="search-recipe__dropdown-buttons">
+                <label for="cuisine-input-field">
+                    <select name="cuisine" id="cuisine-input-field" class="search-recipe__dropdown-buttons">
                         <option value="" disabled selected>Cuisine</option>
-                        <option value="0">American</option>
-                        <option value="1">Asian</option>
-                        <option value="2">British</option>
-                        <option value="3">Caribbean</option>
-                        <option value="4">Central Europe</option>
-                        <option value="5">Chinese</option>
-                        <option value="6">Eastern Europe</option>
-                        <option value="7">French</option>
-                        <option value="8">Indian</option>
-                        <option value="9">Italian</option>
-                        <option value="10">Japanese</option>
-                        <option value="11">Kosher</option>
-                        <option value="12">Mediterranean</option>
-                        <option value="13">Mexican</option>
-                        <option value="14">Middle Eastern</option>
-                        <option value="15">Nordic</option>
-                        <option value="16">South American</option>
-                        <option value="17">Soath East Asia</option>
+                        <option value="american">American</option>
+                        <option value="asian">Asian</option>
+                        <option value="british">British</option>
+                        <option value="caribbean">Caribbean</option>
+                        <option value="central europe">Central Europe</option>
+                        <option value="chines">Chinese</option>
+                        <option value="eastern europe">Eastern Europe</option>
+                        <option value="french">French</option>
+                        <option value="indian">Indian</option>
+                        <option value="italian">Italian</option>
+                        <option value="japanese">Japanese</option>
+                        <option value="kosher">Kosher</option>
+                        <option value="mediterranean">Mediterranean</option>
+                        <option value="mexican">Mexican</option>
+                        <option value="middle eastern">Middle Eastern</option>
+                        <option value="nordic">Nordic</option>
+                        <option value="south american">South American</option>
+                        <option value="south east asia">Soath East Asia</option>
                     </select>
                 </label>
-                <label for="diet">
-                    <select name="diet" id="diet" class="search-recipe__dropdown-buttons">
+                <label for="diet-input-field">
+                    <select name="diet" id="diet-input-field" class="search-recipe__dropdown-buttons">
                         <option value="" disabled selected>Diet</option>
-                        <option value="0">Balanced</option>
-                        <option value="1">High-fiber</option>
-                        <option value="2">High-protein</option>
-                        <option value="2">Low-carb</option>
-                        <option value="2">Low-fat</option>
-                        <option value="2">Low-sodium</option>
+                        <option value="balanced">Balanced</option>
+                        <option value="high-fiber">High-fiber</option>
+                        <option value="high-protein">High-protein</option>
+                        <option value="low-carb">Low-carb</option>
+                        <option value="low-fat">Low-fat</option>
+                        <option value="low-sodium">Low-sodium</option>
 
                     </select>
                 </label>
-                <label for="time">
-                    <select name="time" id="time" class="search-recipe__dropdown-buttons">
+                <label for="time-of-recipe-input-field">
+                    <select name="time" id="time-of-recipe-input-field" class="search-recipe__dropdown-buttons">
                         <option value="" disabled selected>Time</option>
                         <option value="0-15">0 - 15 min</option>
                         <option value="15-30">15 - 30 min</option>
@@ -135,7 +135,7 @@
                     </select>
                 </label>
                 <a href="#">
-                    <button type="submit" class="general-button">search</button>
+                    <button type="submit" class="general-button" id="submit-recipe-search-query">search</button>
                 </a>
             </form>
         </div>
