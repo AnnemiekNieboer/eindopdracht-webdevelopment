@@ -4,8 +4,8 @@
   "description": "Eindopdracht webdevelopment deel van de front-end opleiding Novi Hogeschool",
   "main": "main.js",
   "scripts": {
-    "start": "parcel src/recipe-page.html",
-    "build": "parcel build src/recipe-page.html",
+    "start": "parcel src/calorie-calculator.html",
+    "build": "parcel build src/calorie-calculator.html",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

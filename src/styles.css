@@ -562,6 +562,10 @@ h1 {
     padding-bottom: 10px;
 }
 
+.calorie-calculator-data__heading th:last-child {
+    padding-right: 0;
+}
+
 .calorie-calculator-data td {
     text-align: center;
     padding-right: 50px;
@@ -569,7 +573,10 @@ h1 {
 
 .calorie-calculator-data td:first-child {
     text-align: left;
-    padding-right: 50px;
+}
+
+.calorie-calculator-data td:last-child {
+    padding-right: 0;
 }
 
 .calorie-calculator__addedCalorie-data table {
