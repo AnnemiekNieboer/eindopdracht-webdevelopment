@@ -89,11 +89,17 @@ h1 {
 .featured-recipes-recipe-card__text-section > h5 {
     font-size: 12px;
     text-transform: capitalize;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .fetched-recipes-recipe-card__text-section > h5 {
     font-size: 12px;
     text-transform: capitalize;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .featured-recipes-recipe-card__text-section, .fetched-recipes-recipe-card__text-section {
@@ -384,7 +390,8 @@ h1 {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    min-width: 32%;
+    width: 32%;
+    max-width: 256px;
     position: relative;
     height: 175px;
 }

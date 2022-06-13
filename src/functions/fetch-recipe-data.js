@@ -26,6 +26,8 @@ async function fetchRecipeData(searchQuery, chosenMealType, chosenCuisine, chose
         // const data = hits.slice(secondNum, firstNum);
         const data = hits.slice(0, 6);
         const recipeItemsContainer = document.getElementById("fetched-recipe-data-search-query");
+        const timeImage = new Image();
+        timeImage.src = require("../assets/icons/time.png");
 
         data.map((recipe) => {
             const roundedCalories = Math.round(recipe.recipe.calories);
@@ -37,7 +39,7 @@ async function fetchRecipeData(searchQuery, chosenMealType, chosenCuisine, chose
                 <div class="fetched-recipes-recipe-card__calories-and-time">
                     <p>${roundedCalories} calories | ${recipe.recipe.ingredients.length} ingredients</p>
                     <div class="fetched-recipes-recipe-card__time">
-                        <img src='../assets/icons/time.png' alt='time-icon'>
+                        <img src="${timeImage.src}" alt="time-icon">
                         <p>${recipe.recipe.totalTime} min</p>
                     </div>
                 </div>
