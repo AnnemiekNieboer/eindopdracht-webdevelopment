@@ -9,7 +9,7 @@ async function fetchRecipeData(searchQuery, chosenMealType, chosenCuisine, chose
                 app_id: "a22b9b3d",
                 q: searchQuery,
                 mealType: chosenMealType ? chosenMealType : null,
-                cuisine: chosenCuisine ? chosenCuisine : null,
+                cuisineType: chosenCuisine ? chosenCuisine : null,
                 diet: chosenDiet ? chosenDiet : null,
                 time: chosenTime ? chosenTime : null,
             }
