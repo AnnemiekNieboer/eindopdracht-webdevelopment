@@ -8,10 +8,10 @@ async function fetchRecipeData(searchQuery, chosenMealType, chosenCuisine, chose
                 app_key: "2bff5b6a6765af87b83e36b90a02d38b",
                 app_id: "a22b9b3d",
                 q: searchQuery,
-                mealType: chosenMealType,
-                cuisine: chosenCuisine,
-                diet: chosenDiet,
-                time: chosenTime,
+                mealType: chosenMealType ? chosenMealType : null,
+                cuisine: chosenCuisine ? chosenCuisine : null,
+                diet: chosenDiet ? chosenDiet : null,
+                time: chosenTime ? chosenTime : null,
             }
         })
         const hits = response.data.hits;
@@ -24,18 +24,23 @@ async function fetchRecipeData(searchQuery, chosenMealType, chosenCuisine, chose
 
         // console.log(hits.slice(secondNum, firstNum));
         // const data = hits.slice(secondNum, firstNum);
-        const data = hits.slice(0, 6);
+        const data = hits.slice(0, 12);
         const recipeItemsContainer = document.getElementById("fetched-recipe-data-search-query");
+        recipeItemsContainer.replaceChildren();
         const timeImage = new Image();
         timeImage.src = require("../assets/icons/time.png");
 
         data.map((recipe) => {
+            const recipeUri = recipe.recipe.uri;
+            const recipeId = recipeUri.split("_")[1];
+            // console.log(recipeId);
             const roundedCalories = Math.round(recipe.recipe.calories);
             recipeItemsContainer.innerHTML += `
             <div class="main-fetched-recipes__recipe-card">
             <img src="${recipe.recipe.image}" alt="${recipe.recipe.label}">
             <div class="fetched-recipes-recipe-card__text-section">
-                <h5>${recipe.recipe.label}</h5>
+                <a href="/recipe-page.html?id=${recipeId}" class="recipe-card__link">
+                <h5 class="recipe-card__header">${recipe.recipe.label}</h5>
                 <div class="fetched-recipes-recipe-card__calories-and-time">
                     <p>${roundedCalories} calories | ${recipe.recipe.ingredients.length} ingredients</p>
                     <div class="fetched-recipes-recipe-card__time">
@@ -43,14 +48,17 @@ async function fetchRecipeData(searchQuery, chosenMealType, chosenCuisine, chose
                         <p>${recipe.recipe.totalTime} min</p>
                     </div>
                 </div>
+                </a>
             </div>
             </div>
             `
         })
 
     } catch (e) {
-        console.log(e)
+        console.log(e);
     }
 }
 
 export default fetchRecipeData;
+
+

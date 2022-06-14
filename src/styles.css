@@ -86,7 +86,12 @@ h1 {
     text-align: right;
 }
 
-.featured-recipes-recipe-card__text-section > h5 {
+.recipe-card__link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.recipe-card__header {
     font-size: 12px;
     text-transform: capitalize;
     white-space: nowrap;
@@ -108,7 +113,7 @@ h1 {
     text-transform: capitalize;
 }
 
-#searchQuery, #searchQuery__calorie-calculator, #calorie-calculator__add-amount {
+#searchQuery, #searchQuery__calorie-calculator, #calorie-calculator-add-amount__input-field {
     font-size: 11px;
 }
 
@@ -360,7 +365,7 @@ h1 {
     min-width: 800px;
 }
 
-#searchQuery, .search-recipe__dropdown-buttons, #searchQuery__calorie-calculator, #calorie-calculator__add-amount {
+#searchQuery, .search-recipe__dropdown-buttons, #searchQuery__calorie-calculator, #calorie-calculator-add-amount__input-field {
     padding-left: 10px;
     height: 28px;
     border-radius: 2px;
