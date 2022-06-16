@@ -20,9 +20,11 @@ document.addEventListener('DOMContentLoaded', (event) => {
             const selectedRecipe = respons.data.recipe;
 
             createRecipeHeader(selectedRecipe);
+            createRecipeIngredientList(selectedRecipe);
             createRecipePreparation(selectedRecipe);
             createRecipeImage(selectedRecipe);
             createNutrientsTable(selectedRecipe);
+            createRecipeHealthLabels(selectedRecipe);
 
         } catch (e) {
             console.error(e)
@@ -43,7 +45,9 @@ const createRecipeHeader = (selectedRecipe) => {
                 <img src="${timeImage.src}" alt="time-icon">
                 <p>${totalTime} min</p>
             `
+}
 
+const createRecipeIngredientList = (selectedRecipe) => {
     selectedRecipe.ingredientLines.map((ingredient) => {
         const ingredienstContainer = document.getElementById("fetched-ingredients-container");
         ingredienstContainer.innerHTML += `
@@ -103,4 +107,13 @@ const createNutrientsTable = (selectedRecipe) => {
         <td>${totalNutrients.NA.unit}</td>
     </tr>
   `
+}
+
+const createRecipeHealthLabels = (selectedRecipe) => {
+  selectedRecipe.healthLabels.map((healthlabel) => {
+      const healthLabelsContainer = document.getElementById("fetched-healthlabels__container");
+      healthLabelsContainer.innerHTML += `
+      <button class="recipe-page__health-label-item">${healthlabel}</button>
+      `
+  })
 }
