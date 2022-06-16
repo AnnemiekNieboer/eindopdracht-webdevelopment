@@ -165,6 +165,10 @@ h1 {
     font-size: 14px;
 }
 
+.recipe-page-recipe-nutrients-table__heading th {
+    font-weight: 400;
+}
+
 .recipe-page__health-label-item {
     font-size: 10px;
     color: var(--main-focus-color);
@@ -491,6 +495,10 @@ h1 {
     width: 30%;
 }
 
+.recipe-page-main__recipe-image img {
+    object-fit: cover;
+}
+
 .recipe-page-main__recipe-ingredients {
     width: 70%;
 }
@@ -509,11 +517,16 @@ h1 {
     width: 30%;
 }
 
-.recipe-nutrients-items__row-1 {
-    padding-right: 170px;
+.recipe-page-main-recipe-nutrients__table {
+    display: flex;
 }
 
-.recipe-nutrients-items__row-2 {
+.recipe-page-recipe-nutrients-table__heading {
+    padding-right: 170px;
+    text-align: left;
+}
+
+.recipe-nutrients-items__column-2 {
     padding-right: 15px;
     text-align: right;
 }

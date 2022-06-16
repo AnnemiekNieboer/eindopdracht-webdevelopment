@@ -33,7 +33,6 @@ async function fetchRecipeData(searchQuery, chosenMealType, chosenCuisine, chose
         data.map((recipe) => {
             const recipeUri = recipe.recipe.uri;
             const recipeId = recipeUri.split("_")[1];
-            // console.log(recipeId);
             const roundedCalories = Math.round(recipe.recipe.calories);
             recipeItemsContainer.innerHTML += `
             <div class="main-fetched-recipes__recipe-card">

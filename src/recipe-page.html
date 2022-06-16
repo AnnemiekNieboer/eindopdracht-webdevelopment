@@ -21,83 +21,48 @@
 </header>
 <main class="outer-container__reuseable">
     <div class="recipe-page-main__outer-container" id="recipe-page-main__outer-container">
-<!--        <div class="recipe-description__header-container">-->
-<!--            <h1>recipe name here</h1>-->
-<!--            <img src="./assets/icons/time.png" alt="time-icon">-->
-<!--            <p>20 min</p>-->
-<!--        </div>-->
+        <div class="recipe-description__header-container" id="fetched-recipe-header-container">
+        </div>
         <div class="recipe-page-main__recipe-ingredients">
             <h5>ingredients</h5>
-            <ul class="recipe-page-main-recipe-ingredients__ingredient-list">
-                <li>Lorem ipsum dolor sit amet.</li>
-                <li>Lorem ipsum dolor sit amet.</li>
-                <li>Lorem ipsum dolor sit amet.</li>
-                <li>Lorem ipsum dolor sit amet.</li>
-                <li>Lorem ipsum dolor sit amet.</li>
-                <li>Lorem ipsum dolor sit amet.</li>
-                <li>Lorem ipsum dolor sit amet.</li>
-                <li>Lorem ipsum dolor sit amet.</li>
+            <ul class="recipe-page-main-recipe-ingredients__ingredient-list" id="fetched-ingredients-container">
             </ul>
         </div>
 
-        <div class="recipe-page-main__recipe-image">
-            <img src="./assets/images/placeholder-images/recipe3.jpeg" alt="placeholder text recipe image">
+        <div class="recipe-page-main__recipe-image" id="fetched-recipe__image">
+<!--            <img src="./assets/images/placeholder-images/recipe3.jpeg" alt="placeholder text recipe image">-->
         </div>
         <div class="recipe-page-main__recipe-description">
             <h5>preparation</h5>
-<!--            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam autem eum facere, harum non omnis-->
-<!--                tempora. Hic impedit inventore iure laborum maxime minus provident quaerat ratione rerum tempore.-->
-<!--                Consectetur eum explicabo hic illo molestias mollitia, quidem quisquam quos tempore ut?-->
-
-<!--                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam autem eum facere, harum non omnis-->
-<!--                tempora. Hic impedit inventore iure laborum maxime minus provident quaerat ratione rerum tempore.-->
-<!--                Consectetur eum explicabo hic illo molestias mollitia, quidem quisquam quos tempore ut?-->
-
-<!--                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam autem eum facere, harum non omnis-->
-<!--                tempora. Hic impedit inventore iure laborum maxime minus provident quaerat ratione rerum tempore.-->
-<!--                Consectetur eum explicabo hic illo molestias mollitia, quidem quisquam quos tempore ut?-->
-
-<!--                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam autem eum facere, harum non omnis-->
-<!--                tempora. Hic impedit inventore iure laborum maxime minus provident quaerat ratione rerum tempore.-->
-<!--                Consectetur eum explicabo hic illo molestias mollitia, quidem quisquam quos tempore ut?-->
-<!--            </p>-->
-            <a href="#">
+            <a href="#" id="fetched-recipe__instructions-button" target="_blank">
                 <button class="general-button">go to instructions</button>
             </a>
         </div>
         <div class="recipe-page-main__recipe-nutrients">
             <h5>nutrients</h5>
             <table class="recipe-page-main-recipe-nutrients__table">
+                <thead class="recipe-page-recipe-nutrients-table__heading">
                 <tr>
-                    <td class="recipe-nutrients-items__row-1">energy</td>
-                    <td class="recipe-nutrients-items__row-2">1000</td>
-                    <td>kcal</td>
+                    <th>energy</th>
                 </tr>
                 <tr>
-                    <td class="recipe-nutrients-items__row-1">fat</td>
-                    <td class="recipe-nutrients-items__row-2">80</td>
-                    <td>g</td>
+                    <th>fat</th>
                 </tr>
                 <tr>
-                    <td class="recipe-nutrients-items__row-1">carbs</td>
-                    <td class="recipe-nutrients-items__row-2">56</td>
-                    <td>g</td>
+                    <th>carbs</th>
                 </tr>
                 <tr>
-                    <td class="recipe-nutrients-items__row-1">sugar</td>
-                    <td class="recipe-nutrients-items__row-2">20</td>
-                    <td>g</td>
+                    <th>sugar</th>
                 </tr>
                 <tr>
-                    <td class="recipe-nutrients-items__row-1">protein</td>
-                    <td class="recipe-nutrients-items__row-2">15</td>
-                    <td>mg</td>
+                    <th>protein</th>
                 </tr>
                 <tr>
-                    <td class="recipe-nutrients-items__row-1">sodium</td>
-                    <td class="recipe-nutrients-items__row-2">1900</td>
-                    <td>g</td>
+                    <th>sodium</th>
                 </tr>
+                </thead>
+                <tbody id="fetched-recipe__nutrients">
+                </tbody>
             </table>
         </div>
         <div class="recipe-page-main__health-labels">

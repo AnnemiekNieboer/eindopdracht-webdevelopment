@@ -46,18 +46,18 @@ async function fetchCalorieData (ingredient) {
             cell3.innerHTML = totalFat;
             cell4.innerHTML = totalCarbs;
 
-            // const allCalories = Number(cell2.textContent);
+            const allCalories = Number(cell2.textContent);
             // console.log(allCalories);
             //
-            // let totalOfAllCalories = 0
-            // for (let i = 2; i < calorieCalculatorTable.rows.length; i++) {
-            //     totalOfAllCalories+=allCalories;
-            // }
+            let totalOfAllCalories = 0
+            for (let i = 2; i < calorieCalculatorTable.rows.length; i++) {
+                totalOfAllCalories+=allCalories;
+            }
             //
             // // totalOfAllCalories += allCalories;
             // console.log(totalOfAllCalories);
             let totalCaloriesTableCell = document.getElementById("calorie-calculator__total-amount-of-calories")
-            // totalCaloriesTableCell.innerHTML = totalOfAllCalories;
+            totalCaloriesTableCell.innerHTML = totalOfAllCalories.toString();
 
             // const allCalories = Number(cell2.textContent);
             // console.log(allCalories);
@@ -66,16 +66,16 @@ async function fetchCalorieData (ingredient) {
             // allAllCalories += allCalories
             // totalCaloriesTableCell.innerHTML = allAllCalories;
 
-            let allAllCalories = null;
-            function countAllCalories(calories) {
-                calories = Number(cell2.textContent);
-                return calories
-
-            }
+            // let allAllCalories = null;
+            // function countAllCalories(calories) {
+            //     calories = Number(cell2.textContent);
+            //     return calories
+            //
+            // }
         })
 
     } catch (e) {
-        console.log(e);
+        console.error(e);
     }
 }
 
