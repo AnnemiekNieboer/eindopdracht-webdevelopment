@@ -33,30 +33,30 @@ async function fetchRecipeHeaderData(searchQuery) {
         timeImage.src = require("./assets/icons/time.png");
 
         headerRecipeContainer.innerHTML = `
-        <div class="header-featured-recipes__recipe-card">
-            <img src="${data[0].recipe.image}" alt="${data[0].recipe.label}">
-            <div class="featured-recipes-recipe-card__text-section">
-                <a href="/recipe-page.html?id=${recipeIdOne}" class="recipe-card__link">
+        <div class="header-featured-recipes__recipe-card reusable-recipe-card__recipe-card">
+            <img class="reusable-recipe-card__recipe-image" src="${data[0].recipe.image}" alt="${data[0].recipe.label}">
+            <a href="/recipe-page.html?id=${recipeIdOne}" class="recipe-card__link">
+            <div class="reusable-recipe-card__text-section">
                 <h5 class="recipe-card__header">${data[0].recipe.label}</h5>
-                <div class="featured-recipes-recipe-card__calories-and-time">
+                <div class="reusable-recipe-card__calories-and-time">
                     <p>${roundedCaloriesOne} calories | ${data[0].recipe.ingredients.length} ingredients</p>
-                    <div class="featured-recipes-recipe-card__time">
+                    <div class="reusable-recipe-card__time">
                         <img src="${timeImage.src}" alt="time-icon">
                         <p>${data[0].recipe.totalTime} min</p>
                     </div>
                 </div>
-                </a>
             </div>
+            </a>
         </div>
-        <div class="header-featured-recipes__recipe-card">
+        <div class="reusable-recipe-card__recipe-card header-featured-recipes__recipe-card ">
             <img src="${data[1].recipe.image}" alt="${data[1].recipe.label}"
                  class="featured-recipes-recipe-card__center-image">
-            <div class="featured-recipes-recipe-card__text-section">
+            <div class="reusable-recipe-card__text-section">
                 <a href="/recipe-page.html?id=${recipeIdTwo}" class="recipe-card__link">
                 <h5 class="recipe-card__header">${data[1].recipe.label}</h5>
-                <div class="featured-recipes-recipe-card__calories-and-time">
+                <div class="reusable-recipe-card__calories-and-time">
                     <p>${roundedCaloriesTwo} calories | ${data[1].recipe.ingredients.length}10 ingredients</p>
-                    <div class="featured-recipes-recipe-card__time">
+                    <div class="reusable-recipe-card__time">
                         <img src="${timeImage.src}" alt="time-icon">
                         <p>${data[1].recipe.totalTime} min</p>
                     </div>
@@ -64,14 +64,14 @@ async function fetchRecipeHeaderData(searchQuery) {
                 </a>
             </div>
         </div>
-        <div class="header-featured-recipes__recipe-card">
-            <img src="${data[2].recipe.image}" alt="${data[2].recipe.label}">
-            <div class="featured-recipes-recipe-card__text-section">
+        <div class="header-featured-recipes__recipe-card reusable-recipe-card__recipe-card">
+            <img class="reusable-recipe-card__recipe-image" src="${data[2].recipe.image}" alt="${data[2].recipe.label}">
+            <div class="reusable-recipe-card__text-section">
                 <a href="/recipe-page.html?id=${recipeIdThree}" class="recipe-card__link">
                 <h5 class="recipe-card__header">${data[2].recipe.label}</h5>
-                <div class="featured-recipes-recipe-card__calories-and-time">
+                <div class="reusable-recipe-card__calories-and-time">
                     <p>${roundedCaloriesThree} calories | ${data[2].recipe.ingredients.length} ingredients</p>
-                    <div class="featured-recipes-recipe-card__time">
+                    <div class="reusable-recipe-card__time">
                         <img src="${timeImage.src}" alt="time-icon">
                         <p>${data[2].recipe.totalTime} min</p>
                     </div>

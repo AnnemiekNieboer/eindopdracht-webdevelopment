@@ -18,12 +18,6 @@
     --main-shadow-color-light: #e1e1e1;
 }
 
-/* --------------- 1.3 Setup Borders (temporary) ------------------- */
-
-/*.main-fetched-recipes__outer-container, .navigation-container, .navigation__list, .navigation__list-logo, .header__featured-recipes {*/
-/*    border: 1px solid red;*/
-/*}*/
-
 /* ------------------------------- 2. Typography ----------------------------------- */
 
 body {
@@ -99,7 +93,7 @@ h1 {
     text-overflow: ellipsis;
 }
 
-.fetched-recipes-recipe-card__text-section > h5 {
+.reusable-recipe-card__text-section h5 {
     font-size: 12px;
     text-transform: capitalize;
     white-space: nowrap;
@@ -107,7 +101,7 @@ h1 {
     text-overflow: ellipsis;
 }
 
-.featured-recipes-recipe-card__text-section, .fetched-recipes-recipe-card__text-section {
+.reusable-recipe-card__text-section {
     font-size: 9px;
     font-weight: 300;
     text-transform: capitalize;
@@ -130,7 +124,7 @@ h1 {
     text-transform: capitalize;
 }
 
-.footer__footer-card > ul {
+.footer__footer-card ul {
     list-style-type: none;
     font-size: 10px;
     color: var(--main-background-color-dark);
@@ -239,6 +233,48 @@ h1 {
     left: 12px;
 }
 
+/*recipe card reusable*/
+.reusable-recipe-card__recipe-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 32%;
+    position: relative;
+    height: 175px;
+}
+
+
+
+.reusable-recipe-card__recipe-image {
+    height: 120px;
+    width: 256px;
+    object-fit: cover;
+    border-radius: 3px 3px 0 0;
+}
+.reusable-recipe-card__calories-and-time {
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 0 5px 0;
+}
+
+.reusable-recipe-card__time {
+    display: flex;
+}
+
+.reusable-recipe-card__time img {
+    width: 11px;
+    height: 11px;
+    margin-right: 6px;
+}
+
+.reusable-recipe-card__text-section {
+    padding: 10px 15px 10px 16px;
+    background-color: var(--main-background-color-dark);
+    border: 1px solid var(--main-shadow-color-light);
+    box-shadow: 0 6px 15px -6px var(--main-shadow-color);
+    border-radius: 0 0 3px 3px;
+}
+
 /* ------------------------------- 4. Areas --------------------------------------- */
 
 /* --------------- 4.1 Header ------------------- */
@@ -290,11 +326,9 @@ h1 {
     min-width: 800px;
     align-self: center;
     margin-left: 10px;
-    flex-shrink: 2;
 }
 
 /* --------------- 4.4 Header-Featured-recipes-section ------------------- */
-
 
 .header__featured-recipes {
     display: flex;
@@ -304,22 +338,9 @@ h1 {
     align-self: center;
 }
 
-
 .header-featured-recipes__recipe-card {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 32%;
-    position: relative;
     top: -15px;
     z-index: 1;
-    height: 175px;
-}
-
-.header-featured-recipes__recipe-card > img {
-    height: 120px;
-    object-fit: cover;
-    border-radius: 3px 3px 0 0;
 }
 
 .header-featured-recipes__recipe-card:nth-of-type(2) {
@@ -332,30 +353,8 @@ h1 {
 
 .header-featured-recipes__recipe-card:nth-of-type(2) > img {
     height: 160px;
-}
+    object-fit: cover;
 
-.featured-recipes-recipe-card__time > img {
-    width: 11px;
-    height: 11px;
-    margin-right: 6px;
-}
-
-.featured-recipes-recipe-card__text-section {
-    padding: 10px 15px 10px 16px;
-    background-color: var(--main-background-color-dark);
-    border: 1px solid var(--main-shadow-color-light);
-    box-shadow: 0 6px 15px -6px var(--main-shadow-color);
-    border-radius: 0 0 3px 3px;
-}
-
-.featured-recipes-recipe-card__calories-and-time {
-    display: flex;
-    justify-content: space-between;
-    margin: 5px 0 5px 0;
-}
-
-.featured-recipes-recipe-card__time {
-    display: flex;
 }
 
 /* --------------- 4.5 Main-Search-Recipe-section ------------------- */
@@ -402,46 +401,6 @@ h1 {
     flex-wrap: wrap;
     align-self: center;
     gap: 20px 12px;
-}
-
-.main-fetched-recipes__recipe-card {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 32%;
-    max-width: 256px;
-    position: relative;
-    height: 175px;
-}
-
-.main-fetched-recipes__recipe-card > img {
-    height: 120px;
-    object-fit: cover;
-    border-radius: 3px 3px 0 0;
-}
-
-.fetched-recipes-recipe-card__text-section {
-    padding: 10px 15px 10px 16px;
-    background-color: var(--main-background-color-dark);
-    border: 1px solid var(--main-shadow-color-light);
-    box-shadow: 0 6px 15px -6px var(--main-shadow-color);
-    border-radius: 0 0 3px 3px;
-}
-
-.fetched-recipes-recipe-card__time {
-    display: flex;
-}
-
-.fetched-recipes-recipe-card__time > img {
-    width: 11px;
-    height: 11px;
-    margin-right: 6px;
-}
-
-.fetched-recipes-recipe-card__calories-and-time {
-    display: flex;
-    justify-content: space-between;
-    margin: 5px 0 5px 0;
 }
 
 /* --------------- 5. Footer ------------------- */

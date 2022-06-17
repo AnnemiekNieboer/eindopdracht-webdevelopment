@@ -26,14 +26,14 @@ async function fetchRecipeData(searchQuery, chosenMealType, chosenCuisine, chose
             const recipeId = recipeUri.split("_")[1];
             const roundedCalories = Math.round(recipe.recipe.calories);
             recipeItemsContainer.innerHTML += `
-            <div class="main-fetched-recipes__recipe-card">
-            <img src="${recipe.recipe.image}" alt="${recipe.recipe.label}">
-            <div class="fetched-recipes-recipe-card__text-section">
+            <div class="reusable-recipe-card__recipe-card">
+            <img class="reusable-recipe-card__recipe-image" src="${recipe.recipe.image}" alt="${recipe.recipe.label}">
+            <div class="reusable-recipe-card__text-section">
                 <a href="/recipe-page.html?id=${recipeId}" class="recipe-card__link">
                 <h5 class="recipe-card__header">${recipe.recipe.label}</h5>
-                <div class="fetched-recipes-recipe-card__calories-and-time">
+                <div class="reusable-recipe-card__calories-and-time">
                     <p>${roundedCalories} calories | ${recipe.recipe.ingredients.length} ingredients</p>
-                    <div class="fetched-recipes-recipe-card__time">
+                    <div class="reusable-recipe-card__time">
                         <img src="${timeImage.src}" alt="time-icon">
                         <p>${recipe.recipe.totalTime} min</p>
                     </div>
