@@ -93,4 +93,4 @@ async function fetchRecipeHeaderData(searchQuery) {
     }
 }
 
-fetchRecipeHeaderData("cake")
+fetchRecipeHeaderData("veggie")
