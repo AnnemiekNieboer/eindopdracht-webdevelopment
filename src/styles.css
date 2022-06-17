@@ -191,6 +191,15 @@ h1 {
     text-align: center;
 }
 
+#calorie-calculator__total-amount-of-calories,
+#calorie-calculator__total-amount-of-fat,
+#calorie-calculator__total-amount-of-carbs,
+.calorie-calculator-data__calories,
+.calorie-calculator-data__fat,
+.calorie-calculator-data__carbs {
+    text-transform: none;
+}
+
 /* ------------------------------- 3. Layout --------------------------------------- */
 
 .outer-container__reuseable {
@@ -617,4 +626,15 @@ h1 {
 .calorie-calculator__search-button, .add-button {
     margin-left: 10px;
 }
-/* ------------------------------- 7. Media Queries --------------------------------------- */
+
+
+.calorie-calculator-data__calories::after {
+    content: " kcal";
+    position: relative;
+}
+
+.calorie-calculator-data__fat::after,
+.calorie-calculator-data__carbs::after {
+    content: " g";
+    position: relative;
+}

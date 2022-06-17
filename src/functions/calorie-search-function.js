@@ -11,8 +11,6 @@ const submitProductCalorieDataForm = () => {
     })
 }
 
-
-
 export default submitProductCalorieDataForm;
 
 

@@ -1,10 +1,8 @@
+import axios from "axios"
 import submitForm from "./functions/recipe-search-function";
-// import fetchRecipeHeaderData from "./functions/fetch-recipes-header";
 
 submitForm();
-// fetchRecipeHeaderData("carrot");
-
-import axios from "axios"
+fetchRecipeHeaderData("veggie")
 
 async function fetchRecipeHeaderData(searchQuery) {
     try {
@@ -17,16 +15,12 @@ async function fetchRecipeHeaderData(searchQuery) {
             }
         })
         const hits = response.data.hits;
-        console.log(hits);
-
         let randomNum = Math.random() * 20;
         randomNum = randomNum + 3;
         const secondNum = Math.round(randomNum);
-        const firstNum = secondNum - 3;
+        const firstNum = secondNum - 3
 
         const data = hits.slice(firstNum, secondNum);
-        console.log(data);
-
         const recipeIdOne = data[0].recipe.uri.split("_")[1];
         const recipeIdTwo = data[1].recipe.uri.split("_")[1];
         const recipeIdThree = data[2].recipe.uri.split("_")[1];
@@ -85,12 +79,8 @@ async function fetchRecipeHeaderData(searchQuery) {
                 </a>
             </div>
         </div>
-
         `
-
     } catch (e) {
         console.error(e)
     }
 }
-
-fetchRecipeHeaderData("veggie")

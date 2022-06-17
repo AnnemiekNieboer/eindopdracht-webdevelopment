@@ -15,15 +15,6 @@ async function fetchRecipeData(searchQuery, chosenMealType, chosenCuisine, chose
             }
         })
         const hits = response.data.hits;
-        // console.log(hits);
-
-        // let randomNum = Math.random() * 20;
-        // randomNum = randomNum + 6;
-        // const firstNum = Math.round(randomNum);
-        // const secondNum = firstNum - 6;
-
-        // console.log(hits.slice(secondNum, firstNum));
-        // const data = hits.slice(secondNum, firstNum);
         const data = hits.slice(0, 12);
         const recipeItemsContainer = document.getElementById("fetched-recipe-data-search-query");
         recipeItemsContainer.replaceChildren();

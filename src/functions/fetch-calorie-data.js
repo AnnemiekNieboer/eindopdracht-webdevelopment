@@ -1,4 +1,5 @@
 import axios from "axios"
+import createTotalAmountsCalorieCalculator from "./calorie-create-total";
 
 async function fetchCalorieData (ingredient) {
     try {
@@ -9,7 +10,6 @@ async function fetchCalorieData (ingredient) {
                 ingr: ingredient,
             }
         })
-        // console.log(response.data.hints);
         const data = response.data;
         const selectedProduct = data.parsed[0].food;
         const nameOfProduct = selectedProduct.label;
@@ -32,43 +32,27 @@ async function fetchCalorieData (ingredient) {
 
         submitForm.addEventListener("submit",(e) => {
             e.preventDefault();
-            const totalCalories = searchQueryFieldInput.value * calories;
-            const totalFat = searchQueryFieldInput.value * fat;
-            const totalCarbs = searchQueryFieldInput.value * carbs;
+            const totalCalories = Math.round(searchQueryFieldInput.value * calories * 100) / 100;  ;
+            const totalFat = Math.round(searchQueryFieldInput.value * fat * 100) / 100 ;
+            const totalCarbs = Math.round(searchQueryFieldInput.value * carbs * 100) / 100;
             const calorieCalculatorTable = document.getElementById("calorie-calculator-addedCalorie-data__table");
             const row = calorieCalculatorTable.insertRow(1);
+            row.className = "calorie-calculator-data";
             const cell1 = row.insertCell(0);
             const cell2 = row.insertCell(1);
             const cell3 = row.insertCell(2);
             const cell4 = row.insertCell(3);
-            cell1.innerHTML = `${nameOfProduct}`;
+            cell1.innerHTML = nameOfProduct;
             cell2.innerHTML = totalCalories;
             cell2.className = "calorie-calculator-data__calories";
             cell3.innerHTML = totalFat;
+            cell3.className = "calorie-calculator-data__fat"
             cell4.innerHTML = totalCarbs;
+            cell4.className = "calorie-calculator-data__carbs"
 
-            const productData = document.getElementsByClassName("calorie-calculator-data__calories");
-            let totalCaloriesTest = null;
-            const arrayOfAllCalories = []
-            // console.log(productData[1].innerText);
-
-            for (let i = 0; i < productData.length; i++) {
-                arrayOfAllCalories.push(productData[i].innerText);
-            }
-            console.log(arrayOfAllCalories);
-            const arrayOfAllCaloriesToNum = arrayOfAllCalories.map(str => {
-                return Number(str);
-            });
-            console.log(arrayOfAllCaloriesToNum);
-
-            const initialValue = 0;
-            const sumOfAllCalories = arrayOfAllCaloriesToNum.reduce(
-                (previousValue, currentValue) => previousValue + currentValue, initialValue
-            );
-            console.log(sumOfAllCalories);
-
-            let totalCaloriesTableCell = document.getElementById("calorie-calculator__total-amount-of-calories")
-            totalCaloriesTableCell.innerHTML = sumOfAllCalories;
+            createTotalAmountsCalorieCalculator("calorie-calculator-data__calories", "calorie-calculator__total-amount-of-calories", "kcal");
+            createTotalAmountsCalorieCalculator("calorie-calculator-data__fat", "calorie-calculator__total-amount-of-fat", "g");
+            createTotalAmountsCalorieCalculator("calorie-calculator-data__carbs", "calorie-calculator__total-amount-of-carbs", "g");
         })
 
     } catch (e) {
