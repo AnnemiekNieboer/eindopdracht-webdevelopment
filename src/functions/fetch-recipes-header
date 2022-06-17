@@ -1,0 +1,18 @@
+import axios from "axios"
+
+async function fetchRecipeHeaderData(searchQuery) {
+    try {
+        const response = await axios.get("https://api.edamam.com/api/recipes/v2", {
+            params: {
+                type: "public",
+                app_key: "2bff5b6a6765af87b83e36b90a02d38b",
+                app_id: "a22b9b3d",
+                q: searchQuery,
+            }
+        })
+        const hits = response.data.hits;
+        console.log(hits);
+    } catch (e) {
+        console.error(e)
+    }
+}

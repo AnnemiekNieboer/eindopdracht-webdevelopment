@@ -54,7 +54,7 @@ async function fetchRecipeData(searchQuery, chosenMealType, chosenCuisine, chose
         })
 
     } catch (e) {
-        console.log(e);
+        console.error(e);
     }
 }
 

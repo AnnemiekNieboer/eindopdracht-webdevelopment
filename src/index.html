@@ -14,7 +14,7 @@
         </ul>
         <ul class="navigation__list">
             <li><a href="index.html">home</a></li>
-            <li><a href="recipe-page.html">about</a></li>
+            <li><a href="#">about</a></li>
             <li><a href="calorie-calculator.html">calculator</a></li>
         </ul>
     </nav>
@@ -22,58 +22,58 @@
         <div class="header-hero-section__inner-container">
             <h1>delicious recipes.</h1>
             <p>daily updated.</p>
-            <a href="#">
+            <a href="#submit-form">
                 <button type="button" class="general-button">find recipes</button>
             </a>
         </div>
     </div>
-    <div class="header__featured-recipes">
-        <div class="header-featured-recipes__recipe-card">
-            <img src="./assets/images/placeholder-images/recipe1.jpeg" alt="placeholder-alt-text">
-            <div class="featured-recipes-recipe-card__text-section">
-                <a href="#" class="recipe-card__link">
-                <h5 class="recipe-card__header">recipe title</h5>
-                <div class="featured-recipes-recipe-card__calories-and-time">
-                    <p>300 calories | 10 ingredients</p>
-                    <div class="featured-recipes-recipe-card__time">
-                        <img src="./assets/icons/time.png" alt="time-icon">
-                        <p>20 min</p>
-                    </div>
-                </div>
-                </a>
-            </div>
-        </div>
-        <div class="header-featured-recipes__recipe-card">
-            <img src="./assets/images/placeholder-images/recipe2.jpeg" alt="placeholder-alt-text"
-                 class="featured-recipes-recipe-card__center-image">
-            <div class="featured-recipes-recipe-card__text-section">
-                <a href="#" class="recipe-card__link">
-                <h5 class="recipe-card__header">recipe title</h5>
-                <div class="featured-recipes-recipe-card__calories-and-time">
-                    <p>300 calories | 10 ingredients</p>
-                    <div class="featured-recipes-recipe-card__time">
-                        <img src="./assets/icons/time.png" alt="time-icon">
-                        <p>20 min</p>
-                    </div>
-                </div>
-                </a>
-            </div>
-        </div>
-        <div class="header-featured-recipes__recipe-card">
-            <img src="./assets/images/placeholder-images/recipe3.jpeg" alt="placeholder-alt-text">
-            <div class="featured-recipes-recipe-card__text-section">
-                <a href="#" class="recipe-card__link">
-                <h5 class="recipe-card__header">recipe title</h5>
-                <div class="featured-recipes-recipe-card__calories-and-time">
-                    <p>300 calories | 10 ingredients</p>
-                    <div class="featured-recipes-recipe-card__time">
-                        <img src="./assets/icons/time.png" alt="time-icon">
-                        <p>20 min</p>
-                    </div>
-                </div>
-                </a>
-            </div>
-        </div>
+    <div class="header__featured-recipes" id="fetch-header__recipe-data">
+<!--        <div class="header-featured-recipes__recipe-card">-->
+<!--            <img src="./assets/images/placeholder-images/recipe1.jpeg" alt="placeholder-alt-text">-->
+<!--            <div class="featured-recipes-recipe-card__text-section">-->
+<!--                <a href="#" class="recipe-card__link">-->
+<!--                <h5 class="recipe-card__header">recipe title</h5>-->
+<!--                <div class="featured-recipes-recipe-card__calories-and-time">-->
+<!--                    <p>300 calories | 10 ingredients</p>-->
+<!--                    <div class="featured-recipes-recipe-card__time">-->
+<!--                        <img src="./assets/icons/time.png" alt="time-icon">-->
+<!--                        <p>20 min</p>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                </a>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        <div class="header-featured-recipes__recipe-card">-->
+<!--            <img src="./assets/images/placeholder-images/recipe2.jpeg" alt="placeholder-alt-text"-->
+<!--                 class="featured-recipes-recipe-card__center-image">-->
+<!--            <div class="featured-recipes-recipe-card__text-section">-->
+<!--                <a href="#" class="recipe-card__link">-->
+<!--                <h5 class="recipe-card__header">recipe title</h5>-->
+<!--                <div class="featured-recipes-recipe-card__calories-and-time">-->
+<!--                    <p>300 calories | 10 ingredients</p>-->
+<!--                    <div class="featured-recipes-recipe-card__time">-->
+<!--                        <img src="./assets/icons/time.png" alt="time-icon">-->
+<!--                        <p>20 min</p>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                </a>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        <div class="header-featured-recipes__recipe-card">-->
+<!--            <img src="./assets/images/placeholder-images/recipe3.jpeg" alt="placeholder-alt-text">-->
+<!--            <div class="featured-recipes-recipe-card__text-section">-->
+<!--                <a href="#" class="recipe-card__link">-->
+<!--                <h5 class="recipe-card__header">recipe title</h5>-->
+<!--                <div class="featured-recipes-recipe-card__calories-and-time">-->
+<!--                    <p>300 calories | 10 ingredients</p>-->
+<!--                    <div class="featured-recipes-recipe-card__time">-->
+<!--                        <img src="./assets/icons/time.png" alt="time-icon">-->
+<!--                        <p>20 min</p>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                </a>-->
+<!--            </div>-->
+<!--        </div>-->
 
     </div>
 
@@ -88,7 +88,7 @@
                 </label>
                 <label for="meal-type-input-field">
                     <select name="meal-type" id="meal-type-input-field" class="search-recipe__dropdown-buttons">
-                        <option value="" disabled selected>Meal type</option>
+                        <option value="">Meal type</option>
                         <option value="breakfast">Breakfast</option>
                         <option value="dinner">Dinner</option>
                         <option value="lunch">Lunch</option>
@@ -98,7 +98,7 @@
                 </label>
                 <label for="cuisine-input-field">
                     <select name="cuisine" id="cuisine-input-field" class="search-recipe__dropdown-buttons">
-                        <option value="" disabled selected>Cuisine</option>
+                        <option value="">Cuisine</option>
                         <option value="american">American</option>
                         <option value="asian">Asian</option>
                         <option value="british">British</option>
@@ -121,23 +121,22 @@
                 </label>
                 <label for="diet-input-field">
                     <select name="diet" id="diet-input-field" class="search-recipe__dropdown-buttons">
-                        <option value="" disabled selected>Diet</option>
+                        <option value="">Diet</option>
                         <option value="balanced">Balanced</option>
                         <option value="high-fiber">High-fiber</option>
                         <option value="high-protein">High-protein</option>
                         <option value="low-carb">Low-carb</option>
                         <option value="low-fat">Low-fat</option>
                         <option value="low-sodium">Low-sodium</option>
-
                     </select>
                 </label>
                 <label for="time-of-recipe-input-field">
                     <select name="time" id="time-of-recipe-input-field" class="search-recipe__dropdown-buttons">
-                        <option value="" disabled selected>Time</option>
+                        <option value="">Time</option>
                         <option value="0-15">0 - 15 min</option>
                         <option value="15-30">15 - 30 min</option>
                         <option value="30-60">30 - 60 min</option>
-<!--                        <option value="60+">60 min or more</option>-->
+                        <option value="60+">60 min or more</option>
                     </select>
                 </label>
                 <button type="submit" class="general-button" id="submit-recipe-search-query">search</button>
@@ -145,84 +144,6 @@
         </div>
     </div>
     <div class="main-fetched-recipes__outer-container" id="fetched-recipe-data-search-query">
-<!--        <div class="main-fetched-recipes__recipe-card">-->
-<!--            <img src="./assets/images/placeholder-images/recipe4.jpeg" alt="placeholder-alt-text">-->
-<!--            <div class="fetched-recipes-recipe-card__text-section">-->
-<!--                <h5>recipe title</h5>-->
-<!--                <div class="fetched-recipes-recipe-card__calories-and-time">-->
-<!--                    <p>300 calories | 10 ingredients</p>-->
-<!--                    <div class="fetched-recipes-recipe-card__time">-->
-<!--                        <img src="./assets/icons/time.png" alt="time-icon">-->
-<!--                        <p>20 min</p>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--        <div class="main-fetched-recipes__recipe-card">-->
-<!--            <img src="./assets/images/placeholder-images/recipe5.jpeg" alt="placeholder-alt-text">-->
-<!--            <div class="fetched-recipes-recipe-card__text-section">-->
-<!--                <h5>recipe title</h5>-->
-<!--                <div class="fetched-recipes-recipe-card__calories-and-time">-->
-<!--                    <p>300 calories | 10 ingredients</p>-->
-<!--                    <div class="fetched-recipes-recipe-card__time">-->
-<!--                        <img src="./assets/icons/time.png" alt="time-icon">-->
-<!--                        <p>20 min</p>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--        <div class="main-fetched-recipes__recipe-card">-->
-<!--            <img src="./assets/images/placeholder-images/recipe6.jpeg" alt="placeholder-alt-text">-->
-<!--            <div class="fetched-recipes-recipe-card__text-section">-->
-<!--                <h5>recipe title</h5>-->
-<!--                <div class="fetched-recipes-recipe-card__calories-and-time">-->
-<!--                    <p>300 calories | 10 ingredients</p>-->
-<!--                    <div class="fetched-recipes-recipe-card__time">-->
-<!--                        <img src="./assets/icons/time.png" alt="time-icon">-->
-<!--                        <p>20 min</p>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--        <div class="main-fetched-recipes__recipe-card">-->
-<!--            <img src="./assets/images/placeholder-images/recipe7.jpeg" alt="placeholder-alt-text">-->
-<!--            <div class="fetched-recipes-recipe-card__text-section">-->
-<!--                <h5>recipe title</h5>-->
-<!--                <div class="fetched-recipes-recipe-card__calories-and-time">-->
-<!--                    <p>300 calories | 10 ingredients</p>-->
-<!--                    <div class="fetched-recipes-recipe-card__time">-->
-<!--                        <img src="./assets/icons/time.png" alt="time-icon">-->
-<!--                        <p>20 min</p>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--        <div class="main-fetched-recipes__recipe-card">-->
-<!--            <img src="./assets/images/placeholder-images/recipe8.jpeg" alt="placeholder-alt-text">-->
-<!--            <div class="fetched-recipes-recipe-card__text-section">-->
-<!--                <h5>recipe title</h5>-->
-<!--                <div class="fetched-recipes-recipe-card__calories-and-time">-->
-<!--                    <p>300 calories | 10 ingredients</p>-->
-<!--                    <div class="fetched-recipes-recipe-card__time">-->
-<!--                        <img src="./assets/icons/time.png" alt="time-icon">-->
-<!--                        <p>20 min</p>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--        <div class="main-fetched-recipes__recipe-card">-->
-<!--            <img src="./assets/images/placeholder-images/recipe9.jpeg" alt="placeholder-alt-text">-->
-<!--            <div class="fetched-recipes-recipe-card__text-section">-->
-<!--                <h5>recipe title</h5>-->
-<!--                <div class="fetched-recipes-recipe-card__calories-and-time">-->
-<!--                    <p>300 calories | 10 ingredients</p>-->
-<!--                    <div class="fetched-recipes-recipe-card__time">-->
-<!--                        <img src="./assets/icons/time.png" alt="time-icon">-->
-<!--                        <p>20 min</p>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
     </div>
 </main>
 

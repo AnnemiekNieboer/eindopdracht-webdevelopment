@@ -47,18 +47,18 @@ async function fetchCalorieData (ingredient) {
             cell4.innerHTML = totalCarbs;
 
             const allCalories = Number(cell2.textContent);
-            // console.log(allCalories);
+            console.log(allCalories);
             //
             let totalOfAllCalories = 0
-            for (let i = 2; i < calorieCalculatorTable.rows.length; i++) {
-                totalOfAllCalories+=allCalories;
+            for (let i = 1; i < calorieCalculatorTable.rows.length; i++) {
+                totalOfAllCalories += allCalories;
             }
             //
             // // totalOfAllCalories += allCalories;
             // console.log(totalOfAllCalories);
             let totalCaloriesTableCell = document.getElementById("calorie-calculator__total-amount-of-calories")
             totalCaloriesTableCell.innerHTML = totalOfAllCalories.toString();
-
+            console.log(totalCaloriesTableCell);
             // const allCalories = Number(cell2.textContent);
             // console.log(allCalories);
             // // totalCaloriesTableCell.innerHTML = total;
