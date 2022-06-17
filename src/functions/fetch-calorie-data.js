@@ -43,35 +43,32 @@ async function fetchCalorieData (ingredient) {
             const cell4 = row.insertCell(3);
             cell1.innerHTML = `${nameOfProduct}`;
             cell2.innerHTML = totalCalories;
+            cell2.className = "calorie-calculator-data__calories";
             cell3.innerHTML = totalFat;
             cell4.innerHTML = totalCarbs;
 
-            // const allCalories = Number(cell2.textContent);
-            // console.log(allCalories);
-            //
-            let totalOfAllCalories = 0;
-            // totalOfAllCalories += totalCalories;
-            // for (let i = 2; i < calorieCalculatorTable.rows.length; i++) {
-            //     totalOfAllCalories += allCalories;
-            // }
+            const productData = document.getElementsByClassName("calorie-calculator-data__calories");
+            let totalCaloriesTest = null;
+            const arrayOfAllCalories = []
+            // console.log(productData[1].innerText);
 
-            for (let i = 2; i < calorieCalculatorTable.rows.length; i++) {
-                totalOfAllCalories += totalCalories;
+            for (let i = 0; i < productData.length; i++) {
+                arrayOfAllCalories.push(productData[i].innerText);
             }
+            console.log(arrayOfAllCalories);
+            const arrayOfAllCaloriesToNum = arrayOfAllCalories.map(str => {
+                return Number(str);
+            });
+            console.log(arrayOfAllCaloriesToNum);
 
-            //
-            // // totalOfAllCalories += allCalories;
-            // console.log(totalOfAllCalories);
+            const initialValue = 0;
+            const sumOfAllCalories = arrayOfAllCaloriesToNum.reduce(
+                (previousValue, currentValue) => previousValue + currentValue, initialValue
+            );
+            console.log(sumOfAllCalories);
+
             let totalCaloriesTableCell = document.getElementById("calorie-calculator__total-amount-of-calories")
-            totalCaloriesTableCell.innerHTML = totalOfAllCalories.toString();
-            console.log(totalCaloriesTableCell);
-            // const allCalories = Number(cell2.textContent);
-            // console.log(allCalories);
-            // // totalCaloriesTableCell.innerHTML = total;
-            // let allAllCalories = null;
-            // allAllCalories += allCalories
-            // totalCaloriesTableCell.innerHTML = allAllCalories;
-
+            totalCaloriesTableCell.innerHTML = sumOfAllCalories;
         })
 
     } catch (e) {
