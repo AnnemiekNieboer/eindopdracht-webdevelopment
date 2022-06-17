@@ -6,7 +6,6 @@ const submitProductCalorieDataForm = () => {
 
     submitForm.addEventListener("submit",(e) => {
         e.preventDefault();
-        // console.log(searchQueryInputField.value);
         fetchCalorieData(searchQueryInputField.value)
     })
 }

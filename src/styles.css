@@ -234,6 +234,7 @@ h1 {
 }
 
 /*recipe card reusable*/
+
 .reusable-recipe-card__recipe-card {
     display: flex;
     flex-direction: column;
@@ -242,8 +243,6 @@ h1 {
     position: relative;
     height: 175px;
 }
-
-
 
 .reusable-recipe-card__recipe-image {
     height: 120px;
