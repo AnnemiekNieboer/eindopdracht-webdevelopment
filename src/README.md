@@ -19,6 +19,10 @@ supermarket and are you curious how many calories an ingredient has? The Clueles
   - Add selected product with the amount of servings by choice. 
   - Showing a table with the added amount of products, with calorie, fat and carb data. 
 
+**Preview of the homepage with recipes result**
+
+<img height="800" src="./assets/images/TheCluelessCook-Homepage.png" title="Preview of Homepage" width="706"/>
+
 Installation and Requirements
 -----------------------------
 
