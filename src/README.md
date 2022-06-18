@@ -1,13 +1,13 @@
 Introduction
 ------------
 
-**What does the project do**
+**What does the project do?**
 
 Do you never know what to cook tonight? And if you have a recipe, are you also curious about the nutritional values? Or are you in the
 supermarket and are you curious how many calories an ingredient has? The Clueless Cook application will help you with this.
 
 
-**What functions does the project have**
+**What functions does the project have?**
 
 - Homepage:
   - Included with a search function for finding recipes. The search function contains search options for meal-type, cuisine, diet and cooking time. It will show 12 recipes matching the search query.
@@ -15,7 +15,7 @@ supermarket and are you curious how many calories an ingredient has? The Clueles
 - Recipe page:
   - With the recipe title, ingredients list, link to the preparation (linked to the original source of the recipe), recipe image, nutrients table and health labels.
 - Calorie Calculator:
-  - Search by type of product or product barcode, showing serving size.
+  - Search by type of product, which will show the corresponding serving size.
   - Add selected product with the amount of servings by choice. 
   - Showing a table with the added amount of products, with calorie, fat and carb data. 
 
@@ -24,7 +24,7 @@ Installation and Requirements
 
 **Step 1: installing Node.js and npm**
 
-Before you start, you need to have Node.js and npm installed on your system. Check [this](https://nodejs.org/en/download/) website to download and install the latest version. This project is set up with Node.js v16.15.0 and npm v8.10.0. You can check if Node.js and npm are installed on your system and with what version, by running the following commands on the command line:
+Before you start, you will need to have Node.js and npm installed on your system. Check [this](https://nodejs.org/en/download/) website to download and install the latest version. This project is set up with Node.js v16.15.0 and npm v8.10.0. Check if Node.js and npm are installed on your system and with what version, by running the following commands on the command line:
 
 `node -v
 `
@@ -34,7 +34,7 @@ Before you start, you need to have Node.js and npm installed on your system. Che
 
 **Step 2: installing (development) dependencies** 
 
-All the (development) dependencies are mentioned in the package.json file. You can install them all at once by running the following command on the command line:
+All the (development) dependencies are mentioned in the package.json file. Install them all at once by running the following command on the command line:
 
 `npm install
 `
@@ -53,9 +53,9 @@ _The following dependencies, with the minimum version mentioned, are used:_
 
 **Step 3: Use of APIs from Edamam**
 
-In this project the 'Recipe Search API' and 'Food Database API' of Edamam are used (both the V2 version). You can find the full documentation of these APIs at the website of [Edamam](https://www.edamam.com/). 
+In this project the 'Recipe Search API' and 'Food Database API' of Edamam are used (both the V2 version). For the full documentation of these APIs, check the website of [Edamam](https://www.edamam.com/). 
 
-**important!** Before you can use this project by yourself, you need the signup for an account at the [Edamam](https://www.edamam.com/) website and add the 'Recipe Search API' and 'Food Database API' to your account. This will create an application ID and key for both APIs separately. You need to change the application ID and key to your own application ID and key at the following files:
+**important!** Before you can use this project by yourself, signup for an account at the [Edamam](https://www.edamam.com/) website and add the 'Recipe Search API' and 'Food Database API' to your account. This will create an application ID and key for both APIs separately. You need to change the application ID and key to your own application ID and key at the following files:
   - [src/main.js](src/main.js), lines 12 and 13 (app_key and app_id of the Recipe Search API)
   - [src/recipe-page-main.js](src/recipe-page-main.js), lines 15 and 16 (app_key and app_id of the 'Recipe Search API')
   - [src/functions/fetch-recipe-data.js](src/functions/fetch-recipe-data.js), lines 8 and 9 (app_key and app_id of the 'Recipe Search API')
@@ -74,4 +74,4 @@ If you have any issues with installing, or you have questions about the project,
 
 Who maintains and contributes to the project?
 -----------------------------
-Me! Annemiek Nieboer. You can find recent updates at the [GitHub repository](https://github.com/AnnemiekNieboer/eindopdracht-webdevelopment) of this project.
+Me! Annemiek Nieboer. See the most recent updates at the [GitHub repository](https://github.com/AnnemiekNieboer/eindopdracht-webdevelopment) of this project.
