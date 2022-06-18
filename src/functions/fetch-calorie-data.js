@@ -1,5 +1,5 @@
 import axios from "axios"
-import createTotalAmountsCalorieCalculator from "./calorie-create-total";
+import createTotalAmountsCalorieCalculator from "./calorie-create-total-data";
 
 async function fetchCalorieData (ingredient) {
     try {

@@ -37,7 +37,7 @@ async function fetchRecipeHeaderData(searchQuery) {
             <img class="reusable-recipe-card__recipe-image" src="${data[0].recipe.image}" alt="${data[0].recipe.label}">
             <a href="/recipe-page.html?id=${recipeIdOne}" class="recipe-card__link">
             <div class="reusable-recipe-card__text-section">
-                <h5 class="recipe-card__header">${data[0].recipe.label}</h5>
+                <h3 class="recipe-card__header">${data[0].recipe.label}</h3>
                 <div class="reusable-recipe-card__calories-and-time">
                     <p>${roundedCaloriesOne} calories | ${data[0].recipe.ingredients.length} ingredients</p>
                     <div class="reusable-recipe-card__time">
@@ -53,7 +53,7 @@ async function fetchRecipeHeaderData(searchQuery) {
                  class="featured-recipes-recipe-card__center-image">
             <div class="reusable-recipe-card__text-section">
                 <a href="/recipe-page.html?id=${recipeIdTwo}" class="recipe-card__link">
-                <h5 class="recipe-card__header">${data[1].recipe.label}</h5>
+                <h3 class="recipe-card__header">${data[1].recipe.label}</h3>
                 <div class="reusable-recipe-card__calories-and-time">
                     <p>${roundedCaloriesTwo} calories | ${data[1].recipe.ingredients.length}10 ingredients</p>
                     <div class="reusable-recipe-card__time">
@@ -68,7 +68,7 @@ async function fetchRecipeHeaderData(searchQuery) {
             <img class="reusable-recipe-card__recipe-image" src="${data[2].recipe.image}" alt="${data[2].recipe.label}">
             <div class="reusable-recipe-card__text-section">
                 <a href="/recipe-page.html?id=${recipeIdThree}" class="recipe-card__link">
-                <h5 class="recipe-card__header">${data[2].recipe.label}</h5>
+                <h3 class="recipe-card__header">${data[2].recipe.label}</h3>
                 <div class="reusable-recipe-card__calories-and-time">
                     <p>${roundedCaloriesThree} calories | ${data[2].recipe.ingredients.length} ingredients</p>
                     <div class="reusable-recipe-card__time">

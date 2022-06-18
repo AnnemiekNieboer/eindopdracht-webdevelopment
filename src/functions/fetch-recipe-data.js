@@ -15,7 +15,7 @@ async function fetchRecipeData(searchQuery, chosenMealType, chosenCuisine, chose
             }
         })
         const hits = response.data.hits;
-        const data = hits.slice(0, 12);
+        const data = hits.slice(0, 18);
         const recipeItemsContainer = document.getElementById("fetched-recipe-data-search-query");
         recipeItemsContainer.replaceChildren();
         const timeImage = new Image();
@@ -30,7 +30,7 @@ async function fetchRecipeData(searchQuery, chosenMealType, chosenCuisine, chose
             <img class="reusable-recipe-card__recipe-image" src="${recipe.recipe.image}" alt="${recipe.recipe.label}">
             <div class="reusable-recipe-card__text-section">
                 <a href="/recipe-page.html?id=${recipeId}" class="recipe-card__link">
-                <h5 class="recipe-card__header">${recipe.recipe.label}</h5>
+                <h3 class="recipe-card__header">${recipe.recipe.label}</h3>
                 <div class="reusable-recipe-card__calories-and-time">
                     <p>${roundedCalories} calories | ${recipe.recipe.ingredients.length} ingredients</p>
                     <div class="reusable-recipe-card__time">

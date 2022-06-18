@@ -196,7 +196,7 @@ h1 {
 
 /* ------------------------------- 3. Layout --------------------------------------- */
 
-.outer-container__reuseable {
+.outer-container__reusable {
     display: flex;
     flex-direction: column;
     justify-content: center;
